@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+.header {
+    background-color: rgba(0, 0, 139, 0.5);
+    /* Dark blue background with transparency */
+    border-radius: 30px;
+    /* Oval shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 10;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 768px) {
+
+    /* Tailwind's default medium breakpoint */
+    .header {
+        top: 0;
+        width: 720px;
+        /* Fixed width for medium devices and up */
+        bottom: auto;
+        /* Reset bottom property for medium devices and up */
+    }
+}
+
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Adjust the space between links based on your design */
+    margin: 0;
+    padding: 0;
+}
+
+
+.header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    /* Adjust font size as necessary */
+    font-weight: 500;
+    /* Adjust the font weight as necessary */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.header a:hover {
+    color: #6bbdc0;
+    /* A lighter shade when hovering over the links */
+}
