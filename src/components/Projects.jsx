@@ -8,16 +8,16 @@ import animeHubImg from '../assets/thumbnail.png';
 
 const projects = [
     {
-        title: 'Smile Notes',
-        description: 'Ahora crear notas es más fácil con esta aplicación.',
+        title: 'e-Reader',
+        description: 'Loads and displays your epub files! Gave me experience working with epubs especially the ones that have a table of contents with sub-sections within sections.',
         image: smileNotesImg,
         tech: ['UI', 'Firebase'],
         liveLink: '#', // URL to live project
         codeLink: '#', // URL to code repository
     },
     {
-        title: 'Anime Hub',
-        description: 'Busca y guarda tus animes favoritos de forma fácil y rápida.',
+        title: 'Ramen Bowl Website',
+        description: 'Frontend for a ramen bowl restaurant.',
         image: animeHubImg,
         tech: ['React', 'Node.js'],
         liveLink: '#',
