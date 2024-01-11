@@ -1,0 +1,130 @@
+/* Projects.css */
+
+.projects-container {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 139, 0.5);
+    /* Adjust the background as needed */
+    backdrop-filter: blur(10px);
+    /* Glass effect */
+    border-radius: 15px;
+    /* Rounded corners for the container */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.projects-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.project-item {
+    background: #112240;
+    /* Slightly darker background for each project item */
+    border-radius: 10px;
+    margin: 1rem auto;
+    /* Center the items and add margin top and bottom */
+    padding: 1rem;
+    width: 80%;
+    /* Adjust width to make project items smaller */
+    max-width: 960px;
+    /* Maximum width can be set to a fixed value */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center children horizontally */
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+
+    /* Adjust for larger screens */
+    .project-item {
+        flex-direction: row;
+        /* Align side by side for larger screens */
+        align-items: flex-start;
+        /* Align items to the top */
+        padding: 2rem;
+        /* More padding for larger project items */
+    }
+}
+
+.project-image {
+    width: 100%;
+    /* Full width on small screens */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    /* Adjust for larger screens */
+    .project-image {
+        width: 50%;
+        /* Adjust width for side by side layout on larger screens */
+        margin-right: 2rem;
+        /* Add margin between image and text */
+    }
+}
+
+.project-title {
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #a8b2d1;
+    /* Lighter color for the description */
+    margin-bottom: 1rem;
+}
+
+.tech-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-item {
+    font-size: 0.85rem;
+    color: #64ffda;
+    /* A bright color for tech tags */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 0.25rem 0.75rem;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.live-link,
+.code-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #64ffda;
+    /* Same bright color for the links */
+    border: 1px solid #64ffda;
+    /* Border to match the link color */
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.live-link:hover,
+.code-link:hover {
+    background-color: #64ffda;
+    /* Fill the buttons on hover */
+    color: #112240;
+    /* Text color to dark on hover for contrast */
+}

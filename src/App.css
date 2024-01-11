@@ -11,10 +11,10 @@ body,
 .App {
   min-height: 100vh;
   /* 100% of the viewport height */
-  display: flex;
-  flex-direction: column;
   background-image: url('./assets/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* This will keep the background image fixed during scroll */
 }
