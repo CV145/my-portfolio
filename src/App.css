@@ -18,3 +18,8 @@ body,
   background-attachment: fixed;
   /* This will keep the background image fixed during scroll */
 }
+
+.main-content {
+  padding-top: 5rem;
+  /* Adjust the value as needed */
+}

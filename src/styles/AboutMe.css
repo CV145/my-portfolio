@@ -1,40 +1,19 @@
 /* AboutMe.css */
+@keyframes bounce {
 
-.about-me-container {
-    /* Use Tailwind CSS or regular CSS here to match the styling in the image */
-    /* This is an example with regular CSS */
-    background: rgba(0, 0, 139, 0.5);
-    /* Dark blue with transparency */
-    backdrop-filter: blur(10px);
-    /* For the glassy effect */
-    border-radius: 10px;
-    /* Rounded corners */
-    padding: 24px;
-    /* Padding all around */
-    text-align: center;
-    /* Center the text */
-    max-width: 300px;
-    /* Maximum width of the container */
-    margin: auto;
-    /* Center the container */
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50%);
+        /* Increase the bounce height */
+    }
 }
 
-.profile-pic {
-    border-radius: 50%;
-    /* Make the image round */
-    margin: 0 auto;
-    /* Center the image */
-    display: block;
-}
-
-.name {
-    /* Style for the name */
-}
-
-.description {
-    /* Style for the description */
-}
-
-.social-links {
-    /* Style for the social links */
+.bounce {
+    display: inline-block;
+    /* Ensure the element can be transformed */
+    animation: bounce 1s ease-in-out;
 }
