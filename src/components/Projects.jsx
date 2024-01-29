@@ -5,6 +5,7 @@ import ProjectCard from './ProjectCard';
 import smileNotesImg from '../assets/eReader.png';
 import animeHubImg from '../assets/thumbnail.png';
 import schedulerImg from '../assets/AI-Scheduler.png';
+import planWiseImg from '../assets/PlanWise.png';
 
 //Data structure
 const projects = [
@@ -41,7 +42,7 @@ const projects = [
         codeLink: '#',
     },
     {
-        title: 'Ramen Bowl Website',
+        title: 'Car Affordability Calculator',
         description: 'Frontend for a ramen bowl restaurant.',
         image: animeHubImg,
         tech: ['React', 'Tailwind CSS'],
@@ -49,10 +50,10 @@ const projects = [
         codeLink: '#',
     },
     {
-        title: 'Ramen Bowl Website',
-        description: 'Frontend for a ramen bowl restaurant.',
-        image: animeHubImg,
-        tech: ['React', 'Tailwind CSS'],
+        title: 'PlanWise',
+        description: 'This application retrieves US health insurance information for you based on an input form you fill out. The information can be filtered. It uses a proxy server in Node.JS to talk to the Marketplace API and get the insurance data.',
+        image: planWiseImg,
+        tech: ['React', 'NodeJS'],
         liveLink: '#',
         codeLink: '#',
     }
@@ -60,12 +61,15 @@ const projects = [
 
 const Projects = () => {
     return (
-        // Add mx-auto and a max-width class, such as max-w-6xl for a large container size
-        <div className="mx-auto max-w-3xl p-10 mb-16">
+        <div className="mx-auto max-w-6xl p-10">
             <h2 className="text-4xl text-white mb-10">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Ensure grid cells can grow and are full height */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 h-full">
                 {projects.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
+                    // Apply h-full to each grid cell and flex flex-col to allow ProjectCard to grow
+                    <div key={index} className="flex flex-col h-full">
+                        <ProjectCard project={project} />
+                    </div>
                 ))}
             </div>
         </div>

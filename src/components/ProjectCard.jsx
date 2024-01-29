@@ -5,9 +5,16 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'; // Icons for buttons
 
 const ProjectCard = ({ project }) => {
     return (
-        // Remove max-w-sm and adjust width settings
-        <div className="bg-blue-800 rounded-lg overflow-hidden shadow-lg w-full flex flex-col">
-            <img src={project.image} alt={project.title} className="w-full" />
+        // Apply flex-col and flex-grow to the card
+        <div className="rounded-lg overflow-hidden shadow-lg flex flex-col flex-grow bg-blue-800 bg-opacity-80 backdrop-blur">
+            {/* Content grows and pushes buttons down */}
+            <div className="p-4 flex justify-center items-center" style={{ height: '200px' }}> {/* Adjust height as needed */}
+                {/* Image covering the area, centered and cropped */}
+                <div className="w-full h-full overflow-hidden rounded-lg border-4 border-blue-950">
+                    <img src={project.image} alt={project.title}
+                        className="w-full h-full object-cover object-center" />
+                </div>
+            </div>
             <div className="p-6 flex-grow">
                 <h3 className="text-xl text-white font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-300 text-base mb-4">{project.description}</p>
@@ -17,7 +24,8 @@ const ProjectCard = ({ project }) => {
                     ))}
                 </div>
             </div>
-            <div className="flex justify-between items-center p-4 bg-blue-900">
+            {/* Buttons at the bottom */}
+            <div className="flex justify-between items-center p-4 bg-blue-900 bg-opacity-80 backdrop-blur-md">
                 <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-sm bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                     <FiExternalLink className="mr-2" />Visit
                 </a>
