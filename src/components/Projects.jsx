@@ -18,36 +18,12 @@ const projects = [
         codeLink: '#', // URL to code repository
     },
     {
-        title: 'AI Chat Text RPG',
-        description: 'A role-playing game using a chat UI to allow the player to speak to an AI that creates a game world.',
-        image: animeHubImg,
-        tech: ['React', 'ASP.NET'],
-        liveLink: '#',
-        codeLink: '#',
-    },
-    {
         title: 'e-Reader',
         description: 'Loads and displays your epub files! Gave me experience working with epubs especially the ones that have a table of contents with sub-sections within sections.',
         image: smileNotesImg,
         tech: ['UI', 'Firebase'],
         liveLink: '#', // URL to live project
         codeLink: '#', // URL to code repository
-    },
-    {
-        title: 'Ramen Bowl Website',
-        description: 'Frontend for a ramen bowl restaurant.',
-        image: animeHubImg,
-        tech: ['React', 'Tailwind CSS'],
-        liveLink: '#',
-        codeLink: '#',
-    },
-    {
-        title: 'Car Affordability Calculator',
-        description: 'Frontend for a ramen bowl restaurant.',
-        image: animeHubImg,
-        tech: ['React', 'Tailwind CSS'],
-        liveLink: '#',
-        codeLink: '#',
     },
     {
         title: 'PlanWise',

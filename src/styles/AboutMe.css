@@ -17,3 +17,64 @@
     /* Ensure the element can be transformed */
     animation: bounce 1s ease-in-out;
 }
+
+.about-me-container {
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 0 20px;
+    /* Padding on the sides */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.social-links {
+    margin-top: 20px;
+    /* Space between buttons and profile text */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    /* Adjust based on spacing needs */
+}
+
+.summary-card p {
+    color: #fff;
+    /* White text */
+    margin: 0;
+    /* Reset default margins */
+    font-size: 1rem;
+    /* Adjust font-size as needed */
+    line-height: 1.6;
+    /* Adjust line-height for better readability */
+}
+
+
+@media (min-width: 768px) {
+    .summary-card {
+        margin-top: -2rem;
+        /* Pull the card up a bit more on larger screens */
+    }
+}
+
+.summary-card {
+    padding: 24px;
+    /* Adjust padding as per your design preference */
+    margin-top: 3rem;
+    /* Increased margin-top for more space */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    max-width: 640px;
+    /* Set a max-width for larger screens */
+    width: 100%;
+    /* It will take full width of its parent up to max-width */
+}

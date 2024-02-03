@@ -3,23 +3,23 @@ body,
 #root {
   height: 100%;
   margin: 0;
-  /* Reset default margin */
   padding: 0;
-  /* Ensure there's no padding as well */
 }
 
 .App {
   min-height: 100vh;
-  /* 100% of the viewport height */
+  background-color: #000106;
+  /* Fallback background color */
   background-image: url('./assets/background.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  /* Use 'auto' to keep the image's original size */
+  background-position: center top;
+  /* Adjust this to position the image as desired */
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  /* This will keep the background image fixed during scroll */
 }
 
 .main-content {
-  padding-top: 5rem;
-  /* Adjust the value as needed */
+  padding: 1rem;
+  /* This adds space around your content area */
+  /* Your other styles... */
 }

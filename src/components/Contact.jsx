@@ -2,6 +2,11 @@
 
 import React, { useState } from 'react';
 import { FiCopy, FiSend } from 'react-icons/fi';
+import RotatingBlueBall from './BouncingBall';
+import RotatingStars from './Stars';
+import OrbitingStars from './Stars';
+import MovingStars from './Stars';
+import TornadoParticles from './Stars';
 
 const Contact = () => {
     const email = 'cvaleriano564@gmail.com';
@@ -20,6 +25,7 @@ const Contact = () => {
 
     return (
         <div className="mx-auto max-w-3xl p-6 rounded-lg text-white flex flex-col relative">
+            <TornadoParticles />
             <h2 className="text-4xl mb-2">Contact</h2>
             <div className="flex w-full items-center">
                 <input

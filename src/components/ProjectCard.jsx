@@ -1,12 +1,25 @@
-// ProjectCard.jsx
-
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi'; // Icons for buttons
 
 const ProjectCard = ({ project }) => {
+    const tiltRef = useRef(null);
+
+    useEffect(() => {
+        VanillaTilt.init(tiltRef.current, {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5,
+        });
+
+        // Clean up the tilt effect when the component unmounts
+        return () => tiltRef.current.vanillaTilt.destroy();
+    }, []);
+
+
     return (
         // Apply flex-col and flex-grow to the card
-        <div className="rounded-lg overflow-hidden shadow-lg flex flex-col flex-grow bg-blue-800 bg-opacity-80 backdrop-blur">
+        <div ref={tiltRef} className="rounded-lg overflow-hidden shadow-lg flex flex-col flex-grow bg-blue-900 bg-opacity-80 backdrop-blur" data-tilt>
             {/* Content grows and pushes buttons down */}
             <div className="p-4 flex justify-center items-center" style={{ height: '200px' }}> {/* Adjust height as needed */}
                 {/* Image covering the area, centered and cropped */}
