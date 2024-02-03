@@ -15,10 +15,10 @@ const AboutMe = () => {
                     A web developer ready to bring your <span className="text-yellow-400 bounce">visions</span> to <span className="text-yellow-400 bounce">life</span>.
                 </p>
                 <div className="social-links flex justify-center gap-4 mt-4">
-                    <a href="https://github.com/cv145" target="_blank" rel="noopener noreferrer" className="social-link bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                    <a href="https://github.com/cv145" target="_blank" rel="noopener noreferrer" className="social-link bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4  inline-flex items-center">
                         <FaGithub className="mr-2" /> Github
                     </a>
-                    <a href="https://www.linkedin.com/in/carlos-valeriano-006506195/" target="_blank" rel="noopener noreferrer" className="social-link bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                    <a href="https://www.linkedin.com/in/carlos-valeriano-006506195/" target="_blank" rel="noopener noreferrer" className="social-link bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 inline-flex items-center">
                         <FaLinkedin className="mr-2" /> LinkedIn
                     </a>
                 </div>

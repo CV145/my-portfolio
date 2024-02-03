@@ -6,7 +6,7 @@ const ProjectCard = ({ project }) => {
 
     useEffect(() => {
         VanillaTilt.init(tiltRef.current, {
-            max: 25,
+            max: 5,
             speed: 400,
             glare: true,
             "max-glare": 0.5,
@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
 
     return (
         // Apply flex-col and flex-grow to the card
-        <div ref={tiltRef} className="rounded-lg overflow-hidden shadow-lg flex flex-col flex-grow bg-blue-900 bg-opacity-80 backdrop-blur" data-tilt>
+        <div ref={tiltRef} className=" overflow-hidden shadow-lg flex flex-col flex-grow bg-blue-900 bg-opacity-80 backdrop-blur" data-tilt>
             {/* Content grows and pushes buttons down */}
             <div className="p-4 flex justify-center items-center" style={{ height: '200px' }}> {/* Adjust height as needed */}
                 {/* Image covering the area, centered and cropped */}

@@ -69,8 +69,6 @@
     /* Adjust padding as per your design preference */
     margin-top: 3rem;
     /* Increased margin-top for more space */
-    border-radius: 8px;
-    /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
     max-width: 640px;

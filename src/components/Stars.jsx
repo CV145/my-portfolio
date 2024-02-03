@@ -37,20 +37,18 @@ const TornadoParticles = () => {
         const animate = () => {
             requestAnimationFrame(animate);
 
-            // Move the particles in a tornado-like motion
-            particles.forEach((particle) => {
-                const speed = 0.0001;
-                const radius = 2;
+            // Update the animate function with new motion logic
+            const time = Date.now() * 0.0001; // Slow time scale for relaxing motion
+            particles.forEach((particle, index) => {
+                particle.position.x = Math.sin(time + index) * 5; // Orbit radius of 5, can be adjusted
+                particle.position.y = Math.cos(time + index) * 5; // Same orbit radius for y
+                particle.position.z = Math.sin(time + index) * 2; // Smaller movement in z for depth effect
 
-                const x = particle.position.x;
-                const y = particle.position.y;
-
-                const angle = Math.atan2(y, x);
-                const distance = Math.sqrt(x * x + y * y);
-
-                particle.position.x = radius * Math.cos(angle + speed * distance);
-                particle.position.y = radius * Math.sin(angle + speed * distance);
+                // Optional: Rotate the particle for added visual effect
+                particle.rotation.x += 0.01;
+                particle.rotation.y += 0.01;
             });
+
 
             // Render the scene
             renderer.render(scene, camera);

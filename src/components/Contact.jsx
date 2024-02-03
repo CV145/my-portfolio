@@ -1,47 +1,62 @@
-// Contact.jsx
-
 import React, { useState } from 'react';
 import { FiCopy, FiSend } from 'react-icons/fi';
-import RotatingBlueBall from './BouncingBall';
-import RotatingStars from './Stars';
-import OrbitingStars from './Stars';
-import MovingStars from './Stars';
 import TornadoParticles from './Stars';
+import '../styles/Contact.css'; // Ensure this path is correct for your CSS file
 
 const Contact = () => {
-    const email = 'cvaleriano564@gmail.com';
+    const email = 'your_email@example.com';
     const [tooltip, setTooltip] = useState('');
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(email).then(() => {
-            // Handle successful copy...
             setTooltip('Copied!');
             setTimeout(() => setTooltip(''), 1500);
         }, () => {
-            // Handle failed copy...
             setTooltip('Failed to copy');
         });
     };
 
     return (
-        <div className="mx-auto max-w-3xl p-6 rounded-lg text-white flex flex-col relative">
-            <TornadoParticles />
-            <h2 className="text-4xl mb-2">Contact</h2>
-            <div className="flex w-full items-center">
-                <input
-                    type="text"
-                    readOnly
-                    value={email}
-                    className="bg-transparent border-2 border-gray-300 p-2 text-white flex-grow"
-                />
-                <button onClick={copyToClipboard} className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center ml-2">
-                    <FiCopy className="text-lg" />
-                </button>
-                <a href={`mailto:${email}`} className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center justify-center ml-2">
-                    <FiSend className="text-lg" />
-                </a>
+        <div className="contact-container relative mx-auto max-w-3xl p-6 rounded-lg text-white flex flex-col overflow-hidden">
+            <div className="particles-container absolute inset-0 z-0">
+                <TornadoParticles />
             </div>
-            {tooltip && <div className="tooltip bg-gray-500 rounded p-1 absolute -top-8 right-0">{tooltip}</div>}
+            <div className="contact-content z-10">
+                <h2 className="text-4xl mb-6">Contact</h2>
+                <form className="flex flex-col space-y-4">
+                    <label>
+                        Your Name
+                        <input
+                            type="text"
+                            placeholder="John Doe"
+                            className="contact-input"
+                        />
+                    </label>
+                    <label>
+                        Your Email
+                        <input
+                            type="text"
+                            placeholder="johndoe@email.com"
+                            className="contact-input"
+                        />
+                    </label>
+                    <label>
+                        Your Message
+                        <textarea
+                            placeholder="Hello there!"
+                            className="contact-input"
+                            rows="4"
+                        ></textarea>
+                    </label>
+                    <div className="flex justify-between items-center">
+                        <a href={`mailto:${email}`} className="contact-button">
+                            <FiSend className="text-lg" />
+                            <span>Send Email</span>
+                        </a>
+                    </div>
+                </form>
+                {tooltip && <div className="tooltip">{tooltip}</div>}
+            </div>
         </div>
     );
 };

@@ -1,0 +1,86 @@
+.contact-container {
+    background-color: #1a1a2e;
+    /* Or any dark shade you prefer */
+    border-radius: 15px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    /* Ensure the form content is above the particle background */
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* Send the particles to the back */
+}
+
+.contact-content {
+    position: relative;
+    z-index: 10;
+}
+
+.contact-content h2 {
+    margin-bottom: 24px;
+    /* Or adjust as needed */
+    color: #fff;
+    /* White color for the heading */
+}
+
+.contact-input {
+    width: 100%;
+    background-color: #16213e;
+    /* Darker shade for input background */
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: #000000;
+    /* White color for input text */
+    margin-bottom: 10px;
+    /* Space between inputs */
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f3460;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    /* Remove underline from the anchor tag */
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #1a1a2e;
+    /* Lighter shade on hover */
+}
+
+.contact-button span {
+    margin-left: 8px;
+}
+
+.tooltip {
+    background-color: #4e4e50;
+    /* Grey background for tooltip */
+    color: #fff;
+    border-radius: 4px;
+    padding: 6px;
+    position: absolute;
+    top: -35px;
+    /* Adjust as needed */
+    right: 0;
+    z-index: 20;
+    /* Above all */
+    white-space: nowrap;
+    /* Keep tooltip text on one line */
+}
+
+/* Add any additional styles for responsiveness or specific design adjustments */
