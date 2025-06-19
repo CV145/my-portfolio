@@ -37,10 +37,16 @@
     border: none;
     border-radius: 5px;
     padding: 15px;
-    color: #000000;
+    color: #ffffff;
     /* White color for input text */
     margin-bottom: 10px;
     /* Space between inputs */
+}
+
+.contact-input::placeholder {
+    color: #a0a0a0;
+    /* Light gray color for placeholder text */
+    opacity: 0.7;
 }
 
 .contact-button {
