@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# EmailJS config (contains sensitive data)
+src/config/emailjs.js
