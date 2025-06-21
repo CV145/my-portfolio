@@ -10,14 +10,6 @@ import planWiseImg from '../assets/PlanWise.png';
 //Data structure
 const projects = [
     {
-        title: 'AI Scheduler',
-        description: 'This project connects to your Google account and uses OpenAI to generate a schedule for you based on provided input.',
-        image: schedulerImg,
-        tech: ['React', 'ASP.NET'],
-        liveLink: '#', // URL to live project
-        codeLink: '#', // URL to code repository
-    },
-    {
         title: 'e-Reader',
         description: 'Loads and displays your epub files! Gave me experience working with epubs especially the ones that have a table of contents with sub-sections within sections.',
         image: smileNotesImg,
